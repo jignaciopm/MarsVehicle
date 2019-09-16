@@ -60,19 +60,19 @@ class Vehicle {
      */
     protected function toFoward() 
     {
-        // this is $this->getOrientation() == 'N'
+        // this is $this->getOrientation() == 'North'
         if($this->orientation == 0)
             $this->y++;
 
-        // this is $this->getOrientation() == 'E'
+        // this is $this->getOrientation() == 'East'
         elseif($this->orientation == 1)
             $this->x++;
 
-        // this is $this->getOrientation() == 'S'
+        // this is $this->getOrientation() == 'South'
         elseif($this->orientation == 2)
             $this->y--;
 
-        // this is $this->getOrientation() == 'O'
+        // this is $this->getOrientation() == 'West'
         elseif($this->orientation == 3)
             $this->x--;
             
@@ -87,19 +87,19 @@ class Vehicle {
      */
     protected function toBack() 
     {
-        // this is $this->getOrientation() == 'N'
+        // this is $this->getOrientation() == 'North'
         if($this->orientation == 0)
             $this->y--;
 
-        // this is $this->getOrientation() == 'E'
+        // this is $this->getOrientation() == 'East'
         elseif($this->orientation == 1)
             $this->x--;
 
-        // this is $this->getOrientation() == 'S'
+        // this is $this->getOrientation() == 'South'
         elseif($this->orientation == 2)
             $this->y++;
 
-        // this is $this->getOrientation() == 'O'
+        // this is $this->getOrientation() == 'West'
         elseif($this->orientation == 3)
             $this->x++;
     }
