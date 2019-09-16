@@ -1,7 +1,8 @@
 <?php
 
-require_once('class/CommandProcessor.php');
-//use MarsVehicle\CommandProcessor;
+require_once('autoload.php');
+
+use Classes\CommandProcessor;
 
 $commands = array('l','l','l','l','f','f','r','f'); // array of command characters
 
