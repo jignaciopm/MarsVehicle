@@ -15,7 +15,7 @@ class CommandProcessor extends Vehicle {
     {
         if(!empty($commands))
         {
-            foreach ($commands as $key => $command) 
+            foreach ($commands as $command) 
             {
                 if(strtolower($command) == 'l') $this->toLeft();
                 elseif(strtolower($command) == 'r') $this->toRight();
