@@ -1,6 +1,6 @@
 <?php
 
-//namespace MarsVehicle;
+namespace Classes;
 
 class Vehicle {
     protected $orientations = ['North','East','South','West']; // 0 => "North", 1 => "East", 2 => "South", 3 => "West"

@@ -1,7 +1,6 @@
 <?php
 
-require_once('class/Vehicle.php');
-//namespace MarsVehicle;
+namespace Classes;
 
 class CommandProcessor extends Vehicle {
 
