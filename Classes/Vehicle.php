@@ -74,7 +74,7 @@ class Vehicle {
 
         // this is $this->getOrientation() == 'O'
         elseif($this->orientation == 3)
-            $this->x++;
+            $this->x--;
             
     }
 
@@ -101,7 +101,7 @@ class Vehicle {
 
         // this is $this->getOrientation() == 'O'
         elseif($this->orientation == 3)
-            $this->x--;
+            $this->x++;
     }
    
     /**
