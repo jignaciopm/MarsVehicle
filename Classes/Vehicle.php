@@ -85,7 +85,7 @@ class Vehicle {
      *
      * @return void
      */
-    public function toBack() 
+    protected function toBack() 
     {
         // this is $this->getOrientation() == 'N'
         if($this->orientation == 0)
@@ -126,5 +126,17 @@ class Vehicle {
     public function getOrientation() 
     {
         return $this->orientations[$this->orientation];
+    }
+
+    /**
+     * Gets the Vehicle's position in (x,y) representation.
+     *
+     * @param void
+     *
+     * @return string
+     */
+    public function getPosition()
+    {
+        return "(".$this->x.",".$this->y.")";
     }
 }

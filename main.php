@@ -1,14 +1,14 @@
 <?php
+    require_once('autoload.php');
+    use Classes\CommandProcessor;
 
-require_once('autoload.php');
+    $commands = array('l','l','l','l','f','f','r','f'); // array of command characters
 
-use Classes\CommandProcessor;
+    $initialCoordinates = [0,0];
 
-$commands = array('l','l','l','l','f','f','r','f'); // array of command characters
+    $commandProcessor = new CommandProcessor($initialCoordinates);
 
-$initialCoordinates = [0,0];
+    $afterPosition = $commandProcessor->Process($commands);
 
-$commandProcessor = new CommandProcessor($initialCoordinates);
-
-$afterPosition = $commandProcessor->Process($commands);
+    echo $afterPosition; // $commandProcessor->getPosition();
 ?>

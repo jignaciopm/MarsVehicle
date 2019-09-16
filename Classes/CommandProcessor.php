@@ -4,6 +4,13 @@ namespace Classes;
 
 class CommandProcessor extends Vehicle {
 
+    /**
+     * Run commands for the Vehicle.
+     *
+     * @param array $commands is a list of characters 'l','r','f','b'
+     *
+     * @return string Vehicle's position in (x,y) representation
+     */
     public function Process(array $commands = [])
     {
         if(!empty($commands))
@@ -17,7 +24,7 @@ class CommandProcessor extends Vehicle {
             }
         }
 
-        echo "(".$this->x.",".$this->y.")";
+        return "(".$this->x.",".$this->y.")";
     }
 }
 
