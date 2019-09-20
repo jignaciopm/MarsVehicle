@@ -2,7 +2,7 @@
 
 namespace Classes;
 
-class Vehicle {
+trait Vehicle {
     /** @var array $orientations contains a list of strings that indicate orientation for the Vehicle */
     protected $orientations = ['North','East','South','West']; // 0 => "North", 1 => "East", 2 => "South", 3 => "West"
 
@@ -58,23 +58,23 @@ class Vehicle {
      *
      * @return void
      */
-    protected function toFoward() 
+    protected function toFoward($step = 1) 
     {
         // this is $this->getOrientation() == 'North'
         if($this->orientation == 0)
-            $this->y++;
+            $this->y = $this->y + (1 * $step);
 
         // this is $this->getOrientation() == 'East'
         elseif($this->orientation == 1)
-            $this->x++;
+            $this->x = $this->x + (1 * $step);
 
         // this is $this->getOrientation() == 'South'
         elseif($this->orientation == 2)
-            $this->y--;
+            $this->y = $this->y - (1 * $step);
 
         // this is $this->getOrientation() == 'West'
         elseif($this->orientation == 3)
-            $this->x--;
+            $this->x = $this->x - (1 * $step);
             
     }
 
@@ -87,21 +87,7 @@ class Vehicle {
      */
     protected function toBack() 
     {
-        // this is $this->getOrientation() == 'North'
-        if($this->orientation == 0)
-            $this->y--;
-
-        // this is $this->getOrientation() == 'East'
-        elseif($this->orientation == 1)
-            $this->x--;
-
-        // this is $this->getOrientation() == 'South'
-        elseif($this->orientation == 2)
-            $this->y++;
-
-        // this is $this->getOrientation() == 'West'
-        elseif($this->orientation == 3)
-            $this->x++;
+        $this->toFoward(-1);
     }
    
     /**

@@ -2,7 +2,9 @@
 
 namespace Classes;
 
-class CommandProcessor extends Vehicle {
+class CommandProcessor {
+
+    use Vehicle;
 
     /**
      * Run commands for the Vehicle.
